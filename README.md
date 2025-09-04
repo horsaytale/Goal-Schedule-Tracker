@@ -1,4 +1,4 @@
-# 🌱 Daily App
+# 🌱 Goal + Schedule Application
 
 A simple productivity and scheduling app built with **HTML, CSS, JavaScript, Bootstrap, and SQLite (via sql.js)**.  
 Everything runs **directly in your browser** — no backend or server required.
