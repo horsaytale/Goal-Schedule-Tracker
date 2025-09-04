@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <link rel="stylesheet" href="style-schedule.css">
+    <title>Schedule Planner</title>
+</head>
+<body>
+    <div class="body-content p-4">
+        <div class="title">
+            <a href="goal-tracker.html">
+                <button class="back-button">
+                    <img class="icon" src="./pics/open-door.png" alt="toggle">
+                </button>
+            </a>
+            <img class="schedule-title" src="./pics/daily-schedule-bg.png" alt="toggle">
+            <!-- <h1>DAILY SCHEDULE</h1> -->
+            <div class="top-buttons">
+                <div class="others-container">
+                    <button id="save-button">
+                        <img class="icon" src="./pics/save.png" alt="toggle">
+                    </button>
+                    <button id="delete-button">
+                        <img class="icon" src="./pics/bin.png" alt="toggle">
+                    </button>
+                </div>
+                <div class="adj-container" style="margin-top:5px;">
+                    <button id="openGoalAdjustment">
+                        <img class="icon" src="./pics/adjust.png" alt="toggle">
+                        <h6 style="margin:0px;">Goal Adjustment</h6>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="date mt-3">
+            <div class="day-detail flex-adjustment" style="justify-content: center;">
+                <img class="icon" src="./pics/clouds.png" alt="toggle">
+                <h6 class="fixed-day p-0 m-0 ms-1"></h6>
+            </div>
+            <div class="date-detail flex-adjustment">
+                <img class="icon" src="./pics/sunflower.png" alt="toggle">
+                <h6 class="fixed-date"></h6>
+                <img class="icon" src="./pics/sunflower.png" alt="toggle">
+            </div>
+        </div>
+        <div class="main-content mt-2 row">
+            <div class="schedule-table col-md-12 col-lg-8 m-0 p-0">
+                <ul class="list-table">
+                    <li class="schedule-item">
+                        <span class="time cell br-1" contenteditable="true"></span>
+                        <span class="assigned-plan cell not-done" contenteditable="true"></span>
+                        <span class="done-icon">
+                            <i class="fa-solid fa-circle fa-xl"></i>
+                        </span>
+                    </li>
+                    <li class="schedule-item">
+                        <span class="time cell" contenteditable="true"></span>
+                        <span class="assigned-plan cell not-done" contenteditable="true"></span>
+                        <span class="done-icon">
+                            <i class="fa-solid fa-circle fa-xl"></i>
+                        </span>
+                    </li>
+                    <li class="schedule-item">
+                        <span class="time cell" contenteditable="true"></span>
+                        <span class="assigned-plan cell not-done" contenteditable="true"></span>
+                        <span class="done-icon">
+                            <i class="fa-solid fa-circle fa-xl"></i>
+                        </span>
+                    </li>
+                    <li class="schedule-item">
+                        <span class="time cell" contenteditable="true"></span>
+                        <span class="assigned-plan cell not-done" contenteditable="true"></span>
+                        <span class="done-icon">
+                            <i class="fa-solid fa-circle fa-xl"></i>
+                        </span>
+                    </li>
+                    <li class="schedule-item">
+                        <span class="time cell" contenteditable="true"></span>
+                        <span class="assigned-plan cell not-done" contenteditable="true"></span>
+                        <span class="done-icon">
+                            <i class="fa-solid fa-circle fa-xl"></i>
+                        </span>
+                    </li>
+                    <li class="schedule-item">
+                        <span class="time cell" contenteditable="true"></span>
+                        <span class="assigned-plan cell not-done" contenteditable="true"></span>
+                        <span class="done-icon">
+                            <i class="fa-solid fa-circle fa-xl"></i>
+                        </span>
+                    </li>
+                    <li class="schedule-item">
+                        <span class="time cell" contenteditable="true"></span>
+                        <span class="assigned-plan cell not-done" contenteditable="true"></span>
+                        <span class="done-icon">
+                            <i class="fa-solid fa-circle fa-xl"></i>
+                        </span>
+                    </li>
+                    <li class="schedule-item">
+                        <span class="time cell" contenteditable="true"></span>
+                        <span class="assigned-plan cell not-done" contenteditable="true"></span>
+                        <span class="done-icon">
+                            <i class="fa-solid fa-circle fa-xl"></i>
+                        </span>
+                    </li>
+                    <li class="schedule-item">
+                        <span class="time cell" contenteditable="true"></span>
+                        <span class="assigned-plan cell not-done" contenteditable="true"></span>
+                        <span class="done-icon">
+                            <i class="fa-solid fa-circle fa-xl"></i>
+                        </span>
+                    </li>
+                    <li class="schedule-item">
+                        <span class="time cell" contenteditable="true"></span>
+                        <span class="assigned-plan cell not-done" contenteditable="true"></span>
+                        <span class="done-icon">
+                            <i class="fa-solid fa-circle fa-xl"></i>
+                        </span>
+                    </li>
+                    <li class="schedule-item">
+                        <span class="time cell" contenteditable="true"></span>
+                        <span class="assigned-plan cell not-done" contenteditable="true"></span>
+                        <span class="done-icon">
+                            <i class="fa-solid fa-circle fa-xl"></i>
+                        </span>
+                    </li>
+                    <li class="schedule-item">
+                        <span class="time cell" contenteditable="true"></span>
+                        <span class="assigned-plan cell not-done" contenteditable="true"></span>
+                        <span class="done-icon">
+                            <i class="fa-solid fa-circle fa-xl"></i>
+                        </span>
+                    </li>
+                    <li class="schedule-item">
+                        <span class="time cell br-2" contenteditable="true"></span>
+                        <span class="assigned-plan cell not-done" contenteditable="true"></span>
+                        <span class="done-icon">
+                            <i class="fa-solid fa-circle fa-xl"></i>
+                        </span>
+                    </li>
+                  </ul>
+            </div>
+            <div class="others col-md-12 col-lg-4 m-0 p-0">
+                <div class="tasks">
+                    <div class="task-title">
+                        <img class="icon" src="./pics/task.png" alt="toggle">
+                        <h4>Tasks</h4>
+                    </div>
+                    <ul>
+                        <li>
+                            <img class="tree-icon" src="./pics/bare-tree.png" alt="toggle">
+                            <span class="task-text" contenteditable="true"></span>
+                        </li>
+                        <li>
+                            <img class="tree-icon" src="./pics/bare-tree.png">
+                            <span class="task-text" contenteditable="true"></span>
+                        </li>
+                        <li>
+                            <img class="tree-icon" src="./pics/bare-tree.png">
+                            <span class="task-text" contenteditable="true"></span>
+                        </li>
+                        <li>
+                            <img class="tree-icon" src="./pics/bare-tree.png">
+                            <span class="task-text" contenteditable="true"></span>
+                        </li>
+                        <li>
+                            <img class="tree-icon" src="./pics/bare-tree.png">
+                            <span class="task-text" contenteditable="true"></span>
+                        </li>
+                        <li>
+                            <img class="tree-icon" src="./pics/bare-tree.png">
+                            <span class="task-text" contenteditable="true"></span>
+                        </li>
+                        <li>
+                            <img class="tree-icon" src="./pics/bare-tree.png">
+                            <span class="task-text" contenteditable="true"></span>
+                        </li>
+                        <li>
+                            <img class="tree-icon" src="./pics/bare-tree.png">
+                            <span class="task-text" contenteditable="true"></span>
+                        </li>
+                        <li>
+                            <img class="tree-icon" src="./pics/bare-tree.png">
+                            <span class="task-text" contenteditable="true"></span>
+                        </li>
+                        <li>
+                            <img class="tree-icon" src="./pics/bare-tree.png">
+                            <span class="task-text" contenteditable="true"></span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="notes">
+                    <div class="flex-adjustment">
+                        <img class="icon" src="./pics/post-it.png" alt="toggle">
+                        <h4>Notes</h4>
+                    </div>
+                    <textarea name="" id="note-details"></textarea>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Goal Adjustment Modal -->
+     <!-- Button to trigger modal -->
+    <div id="goalModal" class="modal flex-adjustment hidden">
+        <div class="modal-content">
+            <h2>Adjust Your Goals</h2>
+            <div id="goalList"></div>
+
+            <div class="flex-adjustment" style="justify-content: space-evenly;">
+                <button id="saveGoalAdjustments">
+                    <img class="icon" src="./pics/diskette.png" alt="toggle">
+                </button>
+                <button id="closeModal">Cancel</button>
+            </div>
+            
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+    <script src="sql-wasm.js"></script>
+    <script src="script-schedule.js"></script>
+</body>
+</html>

@@ -1,0 +1,177 @@
+* {
+    box-sizing: border-box;
+}
+
+.content {
+    border: 5px solid;
+    margin: 10px auto;
+    padding: 30px 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 60%;
+}
+img{
+    width: 50%;
+    margin: auto;
+}
+h1{
+    font-family: "Cormorant Unicase", serif;
+}
+.intro{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+.intro img{
+    margin-top: -5px;
+    position: absolute;
+    z-index: -1;
+    width: 60%;
+}
+button{
+    font-family: "Chakra Petch", sans-serif;
+    font-weight: 1000;
+    font-size: 25px;
+    padding: 10px 30px;
+    background-color: #EC7FA9;
+    border-radius: 20px;
+    border: 2px solid #FFEDFA;
+    cursor: pointer;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+
+    #name, #birthdate, #username, #password{
+        margin-bottom: 10px;
+    }
+    .basic-details{
+        border: 3px solid black !important;
+        border: 10px;
+        padding: 30px;
+
+        #username, #password{
+            width: 100%;
+        }
+    }
+    .short-details{
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.goals ol {
+    counter-reset: goal;
+    padding-left: 0;
+}
+
+.goals li{
+    position: relative; /* 🔸 Needed for absolute positioning inside */
+    border: 1px solid black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    counter-increment: goal;
+    padding: 5px 2px;
+    padding-left: 2em;  /* Space for number */
+    width: 100%;
+    margin-bottom: 8px;
+
+    span{
+        width: 80%;
+    }
+}
+.goals li::before {
+    content: counter(goal) ".";
+    position: absolute;
+    left: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-weight: bold;
+}
+.goals .editable-details{
+    display: flex;
+    align-items: center;
+}
+.goals .color-picker{
+    width: 30px;
+}
+.goals .end-goal{
+    width: 45px;
+    margin-left: 10px;
+}
+
+@media screen and (max-width:732px){
+    #birthdate, .birth-date{
+        margin-left: 5px;
+    }
+}
+
+@media screen and (max-width:640px){
+    .content{
+        padding: 15px 15px;
+    }
+    .basic-details{
+        padding: 20px !important;
+    }
+    label{
+        font-size: 15px !important;
+    }
+    input, .goals li span, .goals li::before{
+        font-size: 11px;
+    }
+    button{
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width:515px){
+    h1{
+        font-size: 20px;
+    }
+    h3{
+        font-size: 15px;
+    }
+    .basic-details{
+        padding: 10px !important;
+    }
+    label{
+        font-size: 13px !important;
+    }
+    input, .goals li span, .goals li::before{
+        font-size: 9px;
+    }
+    .goals li{
+        padding-left: 20px;
+    }
+    button{
+        font-size: 15px;
+    }
+}
+@media screen and (max-width:430px){
+    h3{
+        font-size: 10px;
+    }
+    .basic-details{
+        padding: 5px !important;
+    }
+    label{
+        font-size: 10px !important;
+    }
+    input, .goals li span, .goals li::before {
+        font-size: 6px;
+    }
+    .goals .color-picker{
+        height: 20px;
+    }
+    .goals li{
+        padding-left: 15px;
+    }
+    button{
+        font-size: 10px;
+    }
+
+}

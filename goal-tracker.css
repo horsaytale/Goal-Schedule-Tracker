@@ -1,0 +1,477 @@
+/* Standardized Elements */
+.icon{
+    width: 23px;
+    height: 23px;
+} 
+.trigger-btn{
+    font-size: 13px;
+}
+.flex-adjustment{
+    display: flex;
+    align-items: center;
+}
+.flex-adjustment-1{
+    display: flex;
+    justify-content: space-between;
+}
+.no-wrap{
+    white-space: nowrap;
+}
+/* ------------------------------------------ */
+.body-content {
+    font-family: sans-serif;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border: 5px solid;
+    margin: 10px auto;
+    align-items: center;
+    width: 60%;
+}
+
+.intro-layouts{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.intro-details, .date-container{
+    flex-direction: column;
+}
+
+.greetings-container{
+    font-family: "Pacifico", cursive;
+    font-weight: 400;
+    font-style: normal;
+    margin-top: 10px;
+
+    img{
+        width: 40px;
+    }
+    p{
+        margin: 0;
+        margin-left: 10px;
+    }
+}
+.date-container{
+    border: 2px solid black;
+    border-radius: 20px;
+    padding: 10px;
+    font-family: "Edu NSW ACT Cursive", cursive;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.intro-buttons{
+    flex-direction: column;
+
+    a{
+        border: 1px solid black;
+        text-decoration: none;
+        color: black;
+        background-color: red;
+        padding: 10px;
+        border-radius: 10px;
+        margin-bottom: 5px;
+        font-weight: 600;
+    }
+}
+
+.layout {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 15px;
+    background: #f9f9f9;
+    overflow-y: auto;
+    
+    .top-title{
+        font-family: "Outfit", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 500;
+        font-style: normal;
+    }
+}
+
+.goal-item {
+    margin-bottom: 10px;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+
+    .goal-description{
+        height: 40px;
+
+        h6{
+            margin: 0;
+            margin-left: 5px;
+        }
+    }
+}
+.goal-bar {
+    background: #ddd;
+    border-radius: 4px;
+    overflow: hidden;
+    height: 10px;
+}
+.goal-progress {
+    background: #76c7c0;
+    height: 100%;
+}
+
+/* TASK + QUOTE SECTION */
+#task-list li{
+    margin: 5px 0;
+}
+
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+}
+
+#monthYear{
+    font-family: "Pacifico", cursive;
+    font-weight: 400;
+    font-style: normal
+}
+.calendar-contents{
+    /* max-width: 800px; */
+    margin: auto;
+    font-family: sans-serif;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    /* overflow: hidden; */
+    padding: 20px;
+}
+#calendar-header{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+.calendar-day {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+#prevMonth,#nextMonth{
+    border: none;          /* remove border */
+    padding: 0;            /* remove padding */
+    margin: 0;             /* remove margin */
+    background: none;      /* no background */
+    cursor: pointer;       /* pointer on hover */
+    display: inline-flex;  /* ensures image size defines the button */
+    align-items: center;
+    justify-content: center;
+}
+.schedule-btn{
+    display: flex;
+    justify-content: center;
+}
+#schedule-btn, #open-goal-popup{
+    border-radius: 10px;
+    padding: 10px;
+    cursor: pointer;
+}
+#schedule-btn{
+    background-color: rgb(255, 255, 157);
+}
+#open-goal-popup{
+    background-color: rgb(255, 157, 157);
+}
+h6{
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+.today {
+    background-color: #ffe399;
+    font-weight: bold;
+}
+
+.popup {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    display: flex; justify-content: center; align-items: center;
+    background: rgba(0,0,0,0.4);
+}
+.popup.hidden { display: none; }
+.popup-content {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    min-width: 300px;
+
+    .goal-popup-title{
+        margin-bottom:10px;
+
+        h5{
+            margin: 0;
+            margin-left: 5px;
+            font-weight: bold;
+        }
+    }
+}
+
+.goal-item-color{
+    width: 100%;
+    height: 20px;
+}
+#goal-target{
+    width: 70px;
+}
+#goal-target, #goal-color{
+    margin-left: 5px;
+}
+#add-goal-btn, #save-goal-btn{
+    margin-right: 4px;
+}
+#goal-form-title{
+    padding: 10px;
+    border: 2px solid black;
+    text-align: center;
+}
+  
+@media screen and (max-width: 750px){
+    #goal-popup{
+        h5{
+            font-size: 18px;
+        }
+        .goal-item{
+            font-size: 12px;
+        }
+        .icon{
+            width: 18px;
+            height: 18px;
+        }
+    }   
+    #goal-form-popup{
+        font-size: 12px;
+    }
+    #goal-color{
+        height: 20px;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .calendar-contents{
+        font-size: 10px;
+    }
+    .calendar-day{
+        padding: 8px;
+    }
+    #goal-popup{
+        h5{
+            font-size: 16px;
+        }
+        .goal-item{
+            font-size: 10px;
+        }
+        .icon{
+            width: 16px;
+            height: 16px;
+        }
+        #cancel-goals-btn{
+            font-size: 12px;
+        }
+    }   
+}
+
+@media screen and (max-width:555px){
+    .intro-buttons a{
+        font-size: 10px;
+        margin-top: 5px;
+        margin-bottom: 2px;
+    }
+    .date-container, .intro-buttons h6, .schedule-btn h6{
+        font-size: 10px;
+    }
+    .icon{
+        width: 20px;
+        height: 20px;
+    }
+    .intro-icon img, .greetings-container img{
+        width: 30px !important;
+    }
+    .top-title{
+        font-size: 15px;
+    }
+    .goal-item h6, #task-list p, #quote-layout p, .digit-progress, .date-progress-info{
+        font-size: 13px;
+    }
+    .calendar-day{
+        padding: 5px;
+    }
+    .popup-content{
+        min-width: 150px;
+        padding: 10px;
+    }
+    #goal-popup{
+        h5{
+            font-size: 14px;
+        }
+        .goal-item{
+            font-size: 8px;
+        }
+        .icon{
+            width: 14px;
+            height: 14px;
+        }
+        #cancel-goals-btn{
+            font-size: 10px;
+        }
+        .goal-item-color{
+            height: 10px;
+        }
+        button{
+            border: 0.5px solid black;
+        }
+    }   
+    #goal-form-popup{
+        font-size: 12px;
+
+        h5{
+            font-size: 12px;
+        }
+        label{
+            font-size: 10px;
+        }
+        .popup-footer{
+            font-size: 10px;
+        }
+    }
+}
+
+@media screen and (max-width:445px){
+    .intro-icon img{
+        display: none;
+    }
+    .intro-layouts{
+        flex-direction: column;
+    }
+    #open-goal-popup, #schedule-btn{
+        margin-top: 10px;
+        display: flex;
+        padding: 5px;
+        align-items: center;
+    }
+    #schedule-btn .trigger-btn{
+        padding-top: 0;
+        margin-left: 5px;
+    }
+    .trigger-btn{
+        margin-top: 0 !important;
+    }
+    .calendar-grid {
+        grid-template-columns: repeat(6, 1fr);
+        gap: 2px;
+    }
+    #details-layout{
+        padding: 0;
+    }
+    .popup-content{
+        padding: 5px;
+        min-width: 150px;
+    }
+    #goal-popup{
+        h5{
+            font-size: 12px;
+        }
+        .goal-item{
+            font-size: 7px;
+        }
+        .icon{
+            width: 12px;
+            height: 12px;
+        }
+        #cancel-goals-btn{
+            font-size: 7px;
+            padding: 6px;
+        }
+        button{
+            line-height: 0;
+            padding: 2px 5px;
+        }
+    }   
+    #goal-form-popup{
+        label{
+            font-size: 8px;
+        }
+        .popup-footer{
+            font-size: 8px;
+        }
+    }
+    #goal-color{
+        height: 16px;
+    }
+}
+
+@media screen and (max-width:400px){
+    .calendar-contents{
+        font-size: 9px;
+        padding: 10px;
+    }
+    
+    #goal-popup{
+        .goal-popup-title{
+            margin-bottom: 5px !important;
+        }
+        h5{
+            font-size: 8px;
+        }
+        .goal-item{
+            font-size: 6px;
+            margin-bottom: 3px !important;
+        }
+        .icon{
+            width: 9px;
+            height: 9px;
+        }
+        #cancel-goals-btn{
+            font-size: 6px;
+            padding: 6px;
+        }
+        .goal-item-color{
+            height: 8px;
+        }
+    }   
+    #goal-form-popup{
+        font-size: 10px;
+    }   
+}
+
+@media screen and (max-width:350px){
+    .date-container, .intro-buttons h6, .schedule-btn h6{
+        font-size: 8px;
+    }
+    
+    .icon{
+        width: 15px;
+        height: 15px;
+    }
+    .intro-icon img, .greetings-container img{
+        width: 25px !important;
+    }
+    .top-title{
+        font-size: 10px;
+    }
+    .goal-description{
+        height: 30px !important;
+    }
+    .goal-item h6, #task-list p, #quote-layout p, .digit-progress, .date-progress-info{
+        font-size: 8px;
+    }
+    .layout{
+        padding: 10px;
+    }
+    .calendar-grid {
+        grid-template-columns: repeat(5, 1fr);
+        /* gap: 2px; */
+    }
+    
+}

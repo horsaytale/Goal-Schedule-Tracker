@@ -1,0 +1,605 @@
+/* Standard fixed elements */
+.flex-adjustment{
+    display: flex;
+    align-items: center;
+}
+/* -------------------------------------- */
+/* General elements */
+button{
+    padding: 13px;
+    border-radius: 10px;
+    cursor: pointer;
+    line-height: 0;
+}
+
+input:disabled {
+    background-color: #f0f0f0;
+    color: #999;
+    cursor: not-allowed;
+}
+.icon{
+    width: 23px;
+    height: 23px;
+}
+/* ------------------------------------------------ */
+
+* {
+    box-sizing: border-box;
+}
+
+.body-content {
+    border: 5px solid;
+    margin: 10px auto;
+    padding: 30px 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 60%;
+}
+.notice-date{
+    margin-bottom: 15px;
+}
+
+.title{
+    font-family: "Montserrat", sans-serif;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+
+    .back-button{
+        background-color: rgb(254, 243, 76);
+    }
+    .schedule-title{
+        width: 220px;
+        height: 105px;
+    }
+    .top-buttons{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        #save-button{
+            background-color: red;
+        }
+    }
+}
+
+.date,.main-content{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.date{
+    justify-content: space-between;
+    width: 100%;
+    font-family: "Montserrat", sans-serif;
+
+    h6{
+        font-weight: 700;
+    }
+    .fixed-date{
+        margin: 0 5px;
+    }
+}
+.main-content{
+    width: 100%;
+
+    ul{
+        width: 100%;
+        padding: 0;
+    }
+    ul li{
+        width: 100%;
+        list-style: none;
+        font-family: "Outfit", sans-serif;
+        font-size: 12px;
+    }
+
+    .schedule-table{
+        .schedule-item{
+            display: table;
+            width: 100%;
+            table-layout: fixed;
+            border-bottom: 1px solid #ddd;
+
+            .br-1{
+                border-top-left-radius: 10%;
+            }
+            .br-2{
+                border-bottom-left-radius: 10%;
+            }
+            .not-done{
+                color: black;
+                text-decoration: none;
+                opacity: 1;
+                background: "white";
+            }
+            .done {
+                color: #aaa;
+                text-decoration: line-through;
+                opacity: 0.6;
+                transition: all 0.3s ease;
+                background: linear-gradient(to right, #e0f7e9, #f5f5f5);
+            }
+        }
+        .schedule-item > span {
+            display: table-cell;
+            vertical-align: middle;
+            padding: 8px;
+            border: 1px solid rgb(173, 215, 228);
+        }
+        .schedule-item .time {
+            width: 80px;
+            text-align: center;
+        }
+        .schedule-item .assigned-plan {
+            width: auto;
+        }
+        .schedule-item .done-icon {
+            visibility: hidden;
+            width: 40px;
+            text-align: center;
+            cursor: pointer;
+            color: rgba(0, 255, 0, 0.918);
+            border: none;      
+        }
+    }
+
+    .others{
+        h4{
+            margin: 0;
+            font-family: "Pacifico", cursive;
+            font-size: 14px;
+            margin-left: 5px;
+        }
+        
+        .tasks{
+            padding: 15px;
+            background-color: rgb(215, 255, 207);
+            border-radius: 10px;
+
+            .task-title{
+                display: flex;
+                align-items: center;
+            }
+
+            ul{
+                padding: 0;
+                margin: 5px 0;
+            }
+            ul li{
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                padding: 6px 4px;
+                min-height: 28px;
+            }
+            .tree-icon {
+                width: 22px;
+                height: 22px;
+                cursor: pointer;
+                user-select: none;
+                visibility: hidden; /* default hidden; shown when text exists */
+            }
+            .task-text {
+                flex: 1;
+                outline: none;         /* remove dotted focus */
+                min-height: 20px;
+                border-bottom: 1px solid black;
+            
+            }
+        }
+        .notes {
+            margin-top: 10px;
+            height: 200px;
+            background: #faffb2;
+            padding: 10px;
+            box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            position: relative;
+            transition: transform 0.2s;
+        }
+        .notes:hover {
+            transform: scale(1.03);
+        }
+        .notes textarea {
+            width: 100%;
+            height: 100%;
+            border: none;
+            background: transparent;
+            resize: none;
+            font-size: 14px;
+            outline: none;
+        }
+    }
+
+}
+
+#openGoalAdjustment{
+    width: auto;   /* Let content decide */
+    height: auto;
+    padding: 0.5em 1em; /* Add spacing */
+    background-color: #a6efff;
+    
+    h6{
+        font-size: 13px;
+    }
+}
+
+/* POP UP MODAL ELEMENTS */
+.modal {
+    position: fixed;
+    top: 0; 
+    left: 0;
+    width: 100vw; height: 100vh;
+    background: rgba(0,0,0,0.5);
+    justify-content: center; 
+
+    h6{
+        margin: 0;
+        margin-left: 5px;
+    }
+}
+.modal.hidden {
+    display: none;
+}
+.modal-content {
+    background: white;
+    padding: 20px;
+    width: 400px;
+    max-height: 80vh;
+    overflow-y: auto;
+    border-radius: 10px;
+
+    h2{
+        padding: 10px;
+        border: 3px solid black;
+        border-radius: 10px;
+        text-align: center;
+        font-family: 'Comic Sans MS', cursive, sans-serif;
+        margin-bottom: 15px;
+    }
+
+    .goal-title-progress{
+        font-family: "Ubuntu", sans-serif;
+        font-weight: bold;
+    }
+    .goal-designs{
+        background-color: #a6efff;
+        padding: 5px;
+        border-radius: 10px;
+        font-family: "Pacifico", cursive;
+    }
+
+}
+.progress-container {
+    margin-bottom: 20px;
+}
+.progress-bar {
+    height: 12px;
+    background: #ddd;
+    border-radius: 6px;
+    overflow: hidden;
+    position: relative;
+    margin: 4px 0;
+}
+.progress-fill {
+    height: 100%;
+    width: 0%;
+    transition: width 0.4s ease;
+}
+.progress-text {
+    font-size: 12px;
+    margin-top: 2px;
+    text-align: right;
+    color: #444;
+}
+#closeModal{
+    padding: 20px;
+}
+#saveGoalAdjustments{
+    padding: 10px 20px;
+}
+/* -------------------------------------------------------- */
+
+@media screen and (max-width:990px){
+    .others{
+        display: flex;
+
+        .tasks{
+            width: 60%;
+            margin-right: 10px;
+            margin-top: 15px;
+        }
+        .notes{
+            margin-top: 15px !important;
+        }
+    }
+
+    /* modal elements */
+    h2{
+        font-size: 24px;
+    }
+}
+
+@media screen and (max-width:750px){
+
+    button{
+        padding: 9px;
+    }
+    .icon{
+        width: 16px;
+        height: 16px;
+    }
+    /* date - top section */
+    h6{
+        font-size: 10px;
+    }
+    #openGoalAdjustment{
+        padding: 5px;
+        h6{
+            font-size: 10px;
+        }
+    }
+
+    .schedule-item {
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        margin-bottom: 10px;
+        padding: 10px;
+        background: #fff;
+
+        span{
+            border-radius: 0 !important;
+            font-size: 9px;
+            font-weight: normal !important;
+        }
+    }
+    .schedule-item .time {
+        margin-bottom: 5px;
+    }
+    .schedule-item .assigned-plan {
+        margin-bottom: 8px;
+    }
+    .schedule-item .done-icon {
+        text-align: right;
+        cursor: pointer;
+        width: 20px !important;
+    }
+
+    .others{
+        h4{
+            font-size: 10px !important;
+        }
+        .tasks{
+            .task-text{
+                font-size: 9px;
+                min-height: 0 !important;
+            }
+            .tree-icon{
+                width: 16px !important;
+                height: 16px !important;
+            }
+        }
+        .notes textarea{
+            font-size: 9px !important;
+        }
+    }
+    
+    .goal-numbers, .progress-text, .adjust-input{
+        font-size: 10px;
+    }
+    .goal-numbers{
+        margin-bottom: 10px;
+    }
+    .goal-numbers p{
+        margin-bottom: 0;
+        margin-top: 5px;
+    }
+    
+}
+
+@media screen and (max-width:640px){
+    .others{
+        flex-direction: column;
+        .tasks{
+            width: 100%;
+        }
+    }
+    .modal-content{
+        width: 300px;
+    }
+    #closeModal{
+        padding: 15px !important;
+    }
+    .notice-date{
+        font-size: 13px;
+    }
+}
+
+@media screen and (max-width:530px){
+    h6, #closeModal, #openGoalAdjustment h6{
+        font-size: 7px;
+    }
+
+    button{
+        padding: 8px;
+        border: 0.5px solid black;
+    }
+    .icon{
+        width: 14px;
+        height: 14px;
+    }
+    .schedule-title{
+        width: 100px !important;
+        height: 50px !important;
+    }
+    .schedule-item {
+        span{
+            font-size: 7px;
+        }
+    }
+    .schedule-item .time {
+        width: 50px !important;
+    }
+    .others{
+        h4{
+            font-size: 8px !important;
+        }
+        .tasks{
+            ul li{
+                padding: 2px !important;
+                min-height: 0 !important;
+            }
+            .task-text{
+                font-size: 7px !important;
+            }
+            .tree-icon{
+                width: 14px !important;
+                height: 14px !important;
+            }
+        }
+        .notes textarea{
+            font-size: 7px !important;
+        }
+    }
+    
+    .modal-content{
+        width: 250px;
+    }
+    h2{
+        font-size: 10px;
+    }
+    .goal-numbers, .progress-text, .adjust-input{
+        font-size: 7px;
+    }
+}
+
+@media screen and (max-width:428px){
+    .icon{
+        width: 12px;
+        height: 12px;
+    }
+    .schedule-title{
+        width: 80px !important;
+        height: 40px !important;
+    }
+    .schedule-item {
+        span{
+            font-size: 5px;
+            padding: 5px !important;
+        }
+    }
+    .schedule-item .time {
+        width: 40px !important;
+    }
+    .others{
+        h4{
+            font-size: 5px !important;
+        }
+        .tasks{
+            margin: 1px;
+            padding: 10px !important;
+
+            .task-text{
+                font-size: 5px !important;
+                border-bottom: 0.4px solid black !important;
+            }
+            .tree-icon{
+                width: 12px !important;
+                height: 12px !important;
+            }
+        }
+        .notes textarea{
+            font-size: 5px !important;
+        }
+    }
+    
+}
+
+@media screen and (max-width:321px){
+    .body-content{
+        padding-top: 6px !important;
+    }
+    .icon{
+        width: 9px;
+        height: 9px;
+    }
+    h6{
+        font-size: 5px;
+    }
+    button{
+        padding: 4px;
+        border-radius: 5px;
+    }
+    #openGoalAdjustment{
+        padding: 3px;
+        h6{
+            font-size: 4px;
+        }
+    }
+    .list-table{
+        margin-bottom: 8px;
+    }
+    
+    .schedule-title{
+        width: 60px;
+        height: 30px;
+    }
+    .schedule-item {
+        margin-bottom: 5px;
+        span{
+            font-size: 4px;
+            padding: 2px !important;
+            border: 0.4px solid rgb(173, 215, 228) !important;
+        }
+        .done-icon{
+            border: none !important;
+        }
+    }
+    .schedule-item .time {
+        width: 22px !important;
+    }
+    .schedule-item .done-icon {
+        width: 10px !important;
+    }
+    .others{
+        .tasks{
+            margin-top: 0px !important;
+            padding: 10px !important;
+
+            .task-text{
+                font-size: 4px !important;
+            }
+            .tree-icon{
+                width: 9px !important;
+                height: 9px !important;
+            }
+        }
+        .notes{
+            margin-top: 8px !important;
+        }
+        .notes textarea{
+            font-size: 4px !important;
+        }
+    }
+    .modal-content{
+        width: 180px;
+    }
+    h2{
+        font-size: 6px;
+    }
+    .goal-numbers, .progress-text, .adjust-input{
+        font-size: 4px;
+    }
+    #closeModal{
+        font-size: 5px;
+        padding: 10px;
+    }
+    #saveGoalAdjustments{
+        padding: 5px 10px;
+    }
+}

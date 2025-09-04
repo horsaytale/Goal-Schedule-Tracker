@@ -1,0 +1,148 @@
+.content {
+    border: 5px solid;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 30px 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.big-picture{
+    width: 30%;
+    margin: auto;
+}
+.intro-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.home-title{
+    font-family: "Cormorant Unicase", serif;
+}
+.bg-title-picture{
+    margin-top: -5px;
+    position: absolute;
+    z-index: -1;
+    width: 40%;
+}
+form{
+    display: flex;
+    flex-direction: column;
+}
+button{
+    font-family: "Chakra Petch", sans-serif;
+    font-weight: 1000;
+    font-size: 20px;
+    padding: 10px 30px;
+    background-color: #EC7FA9;
+    border-radius: 20px;
+    border: 2px solid #FFEDFA;
+    cursor: pointer;
+}
+#message{
+    margin: 2px 0;
+}
+.signup-btn{
+    text-decoration: none;
+    border: 1px solid black;
+    padding: 5px 10px;
+    color: black;
+}
+
+
+
+@media screen and (max-width:990px){
+    .content {
+        padding: 10px 0;
+    }
+    .big-picture{
+        width: 20%;
+        margin: auto;
+    }
+    .bg-title-picture{
+        width: 30%;
+    }
+    .home-title{
+        font-size: 20px;
+    }
+    form{
+        label,input{
+            font-size: 14px;
+        }
+    }
+    button{
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width:640px){
+    .content {
+        padding: 10px 0;
+    }
+    .big-picture{
+        width: 20%;
+        margin: auto;
+    }
+    .bg-title-picture{
+        width: 30%;
+    }
+    .home-title{
+        font-size: 18px;
+    }
+    form{
+        label,input{
+            font-size: 12px;
+        }
+    }
+    button{
+        font-size: 13px;
+    }
+    .signup-btn{
+        font-size: 13px;
+    }
+    
+}
+@media screen and (max-width:520px){
+    .home-title{
+        font-size: 15px;
+    }
+    form{
+        label,input{
+            font-size: 8px;
+        }
+    }
+    button{
+        font-size: 8px;
+        padding: 5px 0;
+    }
+    .signup-btn, #message{
+        font-size: 8px;
+    }
+}
+
+@media screen and (max-width:427px){
+    .content {
+        padding: 3px 0;
+        border: 1.5px solid black;
+    }
+    .home-title{
+        font-size: 10px;
+    }
+    form{
+        label,input{
+            font-size: 6px;
+        }
+    }
+    button{
+        font-size: 6px;
+        padding: 5px 0;
+    }
+    .signup-btn, #message{
+        font-size: 6px;
+    }
+    .signup-btn{
+        padding: 4px;
+    }
+}

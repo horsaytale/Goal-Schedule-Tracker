@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch&family=Cormorant+Unicase:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+    <title>Daily Planner</title>
+</head>
+<body>
+    <div class="content">
+        <img class="big-picture" src="pics/user.png" alt="">
+        <div class="intro-section">
+            <img class="bg-title-picture" src="pics/home-bg.png" alt="">
+            <h1 class="home-title">Daily Planner</h1>
+            <form action="login.js" id="login-form">
+                <label for="username">Username</label>
+                <input type="text" id="username">
+                <label for="pass">Password</label>
+                <input type="text" id="password">
+                <button type="submit">Enter</button>
+            </form>
+            <p id="message"></p>
+            <a class="signup-btn" href="sign-up.html">Sign Up</a>
+        </div>
+    </div>
+    <script src="sql-wasm.js"></script>
+    <script src="credentials.js"></script>
+    <script>
+        if ("serviceWorker" in navigator) {
+          navigator.serviceWorker.register("./sw.js").then(() => {
+            console.log("Service Worker Registered");
+          });
+        }
+    </script>
+</body>
+</html>

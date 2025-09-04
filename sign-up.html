@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch&family=Cormorant+Unicase:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="sign-up.css">
+    <title>Registration</title>
+</head>
+<body>
+    <div class="content">
+        <div class="intro">
+            <h1>Registeration</h1>
+            <form action="sign-up.js" id="signup-form">
+              <div class="basic-details">
+                <div class="short-details">
+                  <div>
+                    <label for="name"><strong>Name</strong></label>
+                    <input type="text" id="name">
+                  </div>
+                  <div>
+                    <label class="birth-date" for="birthdate"><strong>Birth Date</strong></label>
+                    <input type="date" id="birthdate">
+                  </div>
+                </div>
+                <label for="username"><strong>Username</strong></label>
+                <input type="text" id="username">
+                <label for="pass"><strong>Password</strong></label>
+                <input type="text" id="password">
+              </div>
+                <div class="goals">
+                    <h3>Goals</h3>
+                    <ol>
+                      <li>
+                        <span contenteditable="true" class="editable">Write a blog post</span>
+                        <div class="editable-details">
+                            <input type="color" class="color-picker" value="#000000">
+                            <input type="number" class="end-goal" min="1">
+                        </div>
+                      </li>
+                      <li>
+                        <span contenteditable="true" class="editable">Go to the gym</span>
+                        <div class="editable-details">
+                            <input type="color" class="color-picker" value="#000000">
+                            <input type="number" class="end-goal" min="1">
+                        </div>
+                      </li>
+                      <li>
+                        <span contenteditable="true" class="editable"></span>
+                        <div class="editable-details">
+                            <input type="color" class="color-picker" value="#000000">
+                            <input type="number" class="end-goal" min="1">
+                        </div>
+                      </li>
+                      <li>
+                        <span contenteditable="true" class="editable"></span>
+                        <div class="editable-details">
+                            <input type="color" class="color-picker" value="#000000">
+                            <input type="number" class="end-goal" min="1">
+                        </div>
+                      </li>
+                      <li>
+                        <span contenteditable="true" class="editable"></span>
+                        <div class="editable-details">
+                            <input type="color" class="color-picker" value="#000000">
+                            <input type="number" class="end-goal" min="1">
+                        </div>
+                      </li>
+                    </ol>
+                </div>
+                <button type="submit">Submit</button>
+            </form>
+            <p id="message"></p>
+            <!-- <a href="schedule.html">
+                <button>ENTER</button>
+            </a> -->
+        </div>
+    </div>
+    <script src="sql-wasm.js"></script>
+    <script src="credentials.js"></script>
+</body>
+</html>

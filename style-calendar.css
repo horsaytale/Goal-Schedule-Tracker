@@ -1,0 +1,83 @@
+.calendar-wrapper {
+    max-width: 600px;
+    margin: 20px auto;
+    margin-bottom: 0;
+    font-family: sans-serif;
+  }
+  
+  .calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  #year{
+    font-size: 40px;
+    text-align: center;
+    font-family: "Codystar", sans-serif;
+    font-weight: 800;
+    margin: 5px 0;
+    color: red;
+  }
+  #month {
+    font-size: 40px;
+    font-family: "Pacifico", cursive;
+    margin: 0;
+  }
+  
+  .calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 4px;
+  }
+  
+  .day {
+    border: 1px solid #ffac9f;
+    padding: 10px;
+    text-align: center;
+    min-height: 40px;
+    background: #ffffff;
+    position: relative;
+  }
+
+  .day-icon {
+    position: absolute;
+    bottom: 4px;
+    right: 6px;
+    font-size: 1.3rem;
+    pointer-events: none;
+  }
+  .filled-day{
+    cursor: pointer;
+  }
+  .day:nth-child(7n), .day:nth-child(7n+1){
+    background: rgb(255, 200, 251);
+  }
+  .weekday{
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .weekday {
+    background-color: white;
+    font-family: "Pacifico", cursive;
+    border: none;
+    font-weight: bold;
+  }
+  
+  .today {
+    background-color: #bafff0;
+    border: 2px solid hsl(176, 100%, 58%);
+    font-weight: bold;
+  }
+
+button{
+    height: 50px;
+    width: 10%;
+    background-color: black;
+    border-radius: 20%;
+
+    .fa-solid{
+        color: #faff5e;
+    }
+}
+  

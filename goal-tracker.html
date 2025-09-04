@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Edu+NSW+ACT+Cursive:wght@400..700&family=Outfit:wght@100..900&family=Pacifico&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <title>Task Schedule Page</title>
+    <link rel="stylesheet" href="goal-tracker.css">
+</head>
+<body>
+    <div class="body-content">
+        <div class="intro-layouts">
+            <div class="intro-icon">
+            </div>
+            <div class="intro-details flex-adjustment">
+                <div class="date-container flex-adjustment">
+                    <div class="day"></div>
+                    <div class="date mt-1"></div>
+                </div>
+                <div class="greetings-container flex-adjustment"></div>
+            </div>
+            <div class="intro-buttons flex-adjustment">
+                <a href="index.html">Log Out</a>
+                <button class="intro-goaladj-btn" id="open-goal-popup">
+                    <img class="icon" src="./pics/project-management.png" alt="toggle">
+                    <h6 class="trigger-btn mt-1 mb-0">Goals List</h6>
+                </button>
+            </div>
+        </div>
+        <div class="top-layouts row">
+            <!-- Goals Layout -->
+            <div class="layout col-sm-12 col-md-6" id="goals-layout">
+                <div class="flex-adjustment">
+                    <img class="icon" src="./pics/star.png" alt="toggle">
+                    <h5 class="top-title mt-0 mb-0 ms-1">Goals</h5>
+                </div>
+                <div id="goals-details"></div>
+            </div>
+            <!-- Tasks + Quote Layout -->
+            <div class="col-sm-12 col-md-6 mt-3 mt-md-0" id="details-layout">
+                <div class="layout" id="tasks-layout">
+                    <div class="flex-adjustment">
+                        <img class="icon" src="./pics/check-list.png" alt="toggle">
+                        <h5 class="top-title mt-0 mb-0 ms-1">Tasks</h5>
+                    </div>
+                    <ul class="m-0 p-0 mt-2" id="task-list">
+                        <!-- Dynamically populated -->
+                    </ul>
+                </div>
+                <div class="layout mt-2" id="quote-layout">
+                    <div class="flex-adjustment">
+                        <img class="icon" src="./pics/yellow-flower.png" alt="toggle">
+                        <h5 class="top-title mt-0 mb-0 ms-1">Quote of the Day</h5>
+                    </div>
+                    <p class="daily-quote mt-2"></p>
+                </div>
+            </div>
+        </div>
+        <!-- Calendar Layout -->
+         <div class="calendar-contents">
+            <div id="calendar-header">
+                <button id="prevMonth">
+                    <img class="icon" src="./pics/left-arrow.png" alt="toggle">
+                </button>
+                <span id="monthYear"></span>
+                <button id="nextMonth">
+                    <img class="icon" src="./pics/right-arrow.png" alt="toggle">
+                </button>
+            </div>
+            <div id="calendar" class="calendar-grid"></div>
+            <div class="schedule-btn mt-1">
+                <button id="schedule-btn">
+                    <img class="icon" src="./pics/2025.png" alt="toggle">
+                    <h6 class="trigger-btn mt-2 mb-0">Schedule Tasks</h6>
+                </button>
+            </div>
+         </div>
+        
+        <!-- Main Goal List Popup -->
+        <div id="goal-popup" class="popup hidden">
+            <div class="popup-content">
+                <div class="goal-popup-title flex-adjustment">
+                    <img class="icon" src="./pics/success.png" alt="Add">
+                    <h5>My Goals</h5>
+                </div>
+                <div id="goal-list-container"></div>
+            
+                <div class="popup-footer flex-adjustment">
+                    <button id="add-goal-btn">
+                        <img class="icon" src="./pics/plus.png" alt="Add">
+                    </button>
+                    <button id="save-goal-btn">
+                        <img class="icon" src="./pics/floppy-disk.png" alt="Save">
+                    </button>
+                    <button id="cancel-goals-btn">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Add/Edit Goal Popup -->
+    <div id="goal-form-popup" class="popup hidden">
+        <div class="popup-content">
+        <h5 id="goal-form-title">Add Goal</h5>
+        <div class="flex-adjustment" style="text-align: center; margin-bottom: 10px;">
+            <label style="display: flex;"><strong>Color</strong> : <input type="color" id="goal-color"></label>
+            <label style="display: flex; margin-left: 10px;"><strong>Target Number</strong> : <input type="number" id="goal-target" min="1"></label>
+        </div>
+        <label style="margin-bottom: 10px;"><strong>Goal Text</strong> : <input type="text" id="goal-text"></label>
+        <div class="popup-footer">
+            <button id="goal-submit-btn">Submit</button>
+            <button id="goal-cancel-btn">Cancel</button>
+        </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+    <script src="sql-wasm.js"></script>
+    <script src="goal-tracker.js" defer></script>
+</body>
+</html>
